@@ -3,8 +3,11 @@ services:
   - docker
 env:
   - distro: ubuntu1804
+addons:
+  apt:
+    packages:
+    - tmate
 script:
-  - apt install tmate -y
   - tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}')
   - docker pull dazz111/ubuntu-sdk:latest
   - docker run -i -t 253b47eba801 /bin/bash
