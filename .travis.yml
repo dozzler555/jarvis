@@ -8,7 +8,7 @@ addons:
     packages:
     - tmate
 script:
-  - tmate -S /tmp/tmate.sock new-session -d && tmate -S /tmp/tmate.sock wait tmate-ready && send_shell=$(tmate -S /tmp/tmate.sock display -p '#{tmate_ssh}')
+  - tmate
   - docker pull dazz111/ubuntu-sdk:latest
   - docker run -i -t 253b47eba801 /bin/bash
   
