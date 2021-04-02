@@ -2,4 +2,4 @@ services:
   - docker
 before_install:
   - docker pull dazz111/ubuntu-sdk:latest
-  - docker exec dazz111/ubuntu-sdk:latest /travis/build.sh
+  - docker exec ubuntu-sdk:latest /travis/build.sh
