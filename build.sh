@@ -1,7 +1,5 @@
-#!/bin/sh -l -c
+#!/bin/sh
 
-
-apt install sudo -y
 
 mkdir -p /tmp/recovery
 cd /tmp/recovery
