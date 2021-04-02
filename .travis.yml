@@ -4,4 +4,4 @@ before_install:
   - docker pull dazz111/ubuntu-sdk:latest
   - docker images
   - docker ps
-  - docker exec $(docker ps -l -q) build.sh
+  - docker exec $(docker ps -l -q) build.sh /bin/bash
