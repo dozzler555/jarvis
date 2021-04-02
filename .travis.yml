@@ -15,7 +15,7 @@ addons:
     - adb
     - autoconf
     - axel
-    - bisob
+    - bison
     - clang
     - ccache
     - cmake
@@ -33,7 +33,7 @@ addons:
     - imagemagick
     - lib32ncurses5-dev
     - lib32z1-dev
-    - libinfo5
+    - libtinfo5
     - libc6-dev
     - tmate
     - '^liblz4-.*'
