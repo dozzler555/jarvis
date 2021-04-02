@@ -1,14 +1,8 @@
-sudo: required
+
 services: 
   - docker
-env:
-  - distro: ubuntu1804
-addons:
-  apt:
-    packages:
-    - tmate
-script:
-  - tmate
-  - docker pull dazz111/ubuntu-sdk:latest
-  - docker run -i -t 253b47eba801 /bin/bash
-  
+before_install:
+- docker pull dazz111/ubuntu-sdk
+- docker run -d -p 127.0.0.1:80:4567 dazz111/ubuntu-sdk /bin/sh -c "cd /root/ubuntu-sdk; bundle exec foreman start;"
+- docker ps -a
+- docker run dazz111/ubuntu-sdk /bin/sh -c "cd /root/ubuntu-sdk; bundle exec rake test"
