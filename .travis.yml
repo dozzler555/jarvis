@@ -2,7 +2,7 @@ services:
   - docker
 before_install:
   - docker pull dazz111/ubuntu-sdk:latest
-  - docker exec -i --tty ubuntu-sdk:latest /bin/bash $(PWD)/build.sh
+  - docker run -i --tty ubuntu-sdk:latest /bin/bash $(PWD)/build.sh
   - docker images
   - docker ps
   - docker container ls
