@@ -1,14 +1,10 @@
 sudo: required
 
 
-
-services:
-  - docker
-
-before_install:
-- docker pull ubuntu
-- docker run -i -t ubuntu /bin/bash
-- apt install wget -y
-- wget https://raw.githubusercontent.com/dozzler555/jarvis/main/build.sh
-- chmod a+x build.sh
+dist: bionic
+addons:
+  apt:
+    packages:
+    - wget
+script:
 - bash build.sh
