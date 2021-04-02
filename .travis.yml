@@ -3,4 +3,4 @@ services:
 before_install:
   - docker pull dazz111/ubuntu-sdk:latest
 script: 
-  - ./build.sh # run tests
+  - sudo bash build.sh # run tests
