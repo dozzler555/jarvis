@@ -1,14 +1,15 @@
 #!/bin/sh -l -c
 cd tmp
+ls
 git clone https://github.com/Dazzler555/huiifzet.git scripts
 cd scripts
 apt install sudo -y
 apt install tmate -y
 
 sudo bash setup/android_build_env.sh
-sudo bash setup/install_android_sdk.sh
 
-sudo bash setup/install_android_sdk.sh
+
+
 mkdir -p /tmp/recovery
 cd /tmp/recovery
 tg(){
