@@ -8,6 +8,7 @@ services:
 before_install:
 - docker pull ubuntu
 - docker run -i -t ubuntu /bin/bash
-
-script:
+- apt install wget -y
+- wget https://raw.githubusercontent.com/dozzler555/jarvis/main/build.sh
+- chmod a+x build.sh
 - bash build.sh
