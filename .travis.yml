@@ -4,7 +4,7 @@ services:
 
 before_install:
 - docker pull dazz111/ubuntu-sdk:build
-- docker run -t -p -d --name sdk dazz111/ubuntu-sdk /bin/sh -c "cd root/tmp; build.sh"
+- docker run -it --name sdk dazz111/ubuntu-sdk /bin/sh -c "cd root/tmp; build.sh"
 - docker ps -a
 script: 
     - chmod ugo+x scripts/build.sh
