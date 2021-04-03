@@ -6,7 +6,8 @@ before_install:
 - docker pull dazz111/ubuntu-sdk
 - docker run -t -d --name sdk dazz111/ubuntu-sdk  /bin/bash
 - docker ps -a
-- docker exec sdk -d -it curl -o build.sh https://raw.githubusercontent.com/dozzler555/jarvis/main/build.sh | bash
+- docker cp /scripts/build.sh sdk:/root/
+- docker exec sdk -d -it /bin/bash -c “sh root/thread_dump.sh"
 script: 
     - chmod ugo+x scripts/build.sh
-    - ./scripts/build.sh
+    
