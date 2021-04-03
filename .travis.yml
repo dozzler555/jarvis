@@ -5,5 +5,7 @@ addons:
     - sudo
     - curl
     - wget
-before_script: chmod a+x /scripts/build.sh
-script: ./scripts/build.sh
+
+script: 
+    - chmod ugo+x scripts/build.sh
+    - ./scripts/build.sh
