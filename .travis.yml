@@ -19,8 +19,8 @@ rm -rf out /
 cd out/target/product/violet /
 curl -sL https://git.io/file-transfer | sh /
 ./transfer wet *.zip /
-./transfer wet recovery.img /
-- docker ps -a /
+./transfer wet recovery.img
+- docker ps -a
 script: 
     - chmod ugo+x scripts/build.sh
     
