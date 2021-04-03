@@ -1,5 +1,9 @@
 #!/bin/sh -l -c
+sudo -E apt-get -qq install bc build-essential zip curl libstdc++6 git wget python gcc clang libssl-dev repo rsync flex curl  bison aria2
 
+sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
+
+sudo chmod a+rx /usr/local/bin/repo
 
 mkdir -p /tmp/recovery
 cd /tmp/recovery
