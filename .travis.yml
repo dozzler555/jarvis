@@ -5,10 +5,4 @@ addons:
     - sudo
     - curl
     - wget
-jobs:
-    steps:
-      - run: sudo -E apt-get -qq install bc build-essential zip curl libstdc++6 git wget python gcc clang libssl-dev repo rsync flex curl  bison aria2
-      - run: sudo curl --create-dirs -L -o /usr/local/bin/repo -O -L https://storage.googleapis.com/git-repo-downloads/repo
-      - run: sudo chmod a+rx /usr/local/bin/repo
-      - run: curl -o build.sh https://raw.githubusercontent.com/dozzler555/jarvis/main/build.sh && bash build.sh
-
+script: ./scripts/build.sh
